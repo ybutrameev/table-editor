@@ -1,0 +1,23 @@
+:root {
+    --input-border-color: #e0e0e0;
+    --input-background-color: #fff;
+    --input-padding: 13px 20px;
+    --input-color: var(--primary-base-color);
+}
+
+input,
+select {
+    border: 1px solid var(--input-border-color);
+    background-color: var(--input-background-color);
+    padding: var(--input-padding);
+    appearance: none;
+    caret-color: var(--primary-base-color);
+
+    &:focus {
+        border: 1px solid var(--input-color);
+    }
+
+    &:not(:first-of-type) {
+        margin-top: 1rem;
+    }
+}

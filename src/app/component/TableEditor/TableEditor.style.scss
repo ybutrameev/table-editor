@@ -1,0 +1,114 @@
+.TableEditor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 750px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+
+    &-FormContainer {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    &-TableContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &-PopupContent {
+        padding: 30px 26px 40px;
+    }
+
+    .Button {
+        border-radius: 3px;
+        margin-top: 30px;
+    }
+
+    .Field {
+        input {
+            font-size: 12px;
+            border-radius: 5px;
+            width: 100%;
+
+            &::placeholder {
+                color: #868C96;
+                font-size: 12px;
+            }
+
+            &:focus {
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+    }
+
+    &-PopupContent {
+        .TableEditor-FieldsContainer {
+            display: flex;
+            gap: 15px;
+        }
+
+        .TableEditor-BottomContainer {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 18px;
+            gap: 60px;
+
+            .Field {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                min-width: 124px;
+            }
+
+            .Button {
+                border-radius: 3px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.TableEditPopup {
+    .Field {
+        margin: 0;
+
+        &-Label {
+            margin-left: 14px;
+            font-weight: 400;
+            color: #868C96;
+            top: 2px;
+        }
+
+        &_type_checkbox {
+            label:first-of-type ~ label {
+                border-radius: 3px;
+                margin-left: 0;
+            }
+        }
+
+        input {
+            font-size: 12px;
+            border-radius: 5px;
+            width: 100%;
+
+            &::placeholder {
+                color: #868C96;
+                font-size: 12px;
+            }
+
+            &:focus {
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+    }
+}

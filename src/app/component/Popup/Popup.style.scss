@@ -1,0 +1,79 @@
+
+:root {
+    --popup-background: #0003;
+    --popup-content-background: #{$white};
+    --popup-min-width: 100%;
+
+    @include after-mobile {
+        --popup-min-width: 300px;
+    }
+}
+
+.Popup {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 200;
+    position: fixed;
+    background-color: var(--popup-background);
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+        align-items: stretch;
+    }
+
+    &_isVisible {
+        pointer-events: all;
+        opacity: 1;
+        width: 100vw;
+        height: 100vh;
+
+        @include mobile {
+            height: calc(100% - var(--header-total-height));
+        }
+    }
+
+    &-Heading {
+        font-size: 12px;
+        text-decoration: none;
+        margin: 0;
+        color: #ffffff;
+    }
+
+    &-Header {
+        display: flex;
+        justify-content: space-between;
+        background-color: #393939;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        padding: 15px 26px;
+    }
+
+    &-Content {
+        background-color: var(--popup-content-background);
+        border-radius: 3px;
+        min-width: var(--popup-min-width);
+        max-width: 540px;
+        max-height: 80%;
+
+        @include mobile {
+            border-radius: 0;
+            max-height: 100%;
+        }
+    }
+
+    &-CloseBtn {
+        display: flex;
+    }
+}
+
+.scrollDisabled {
+    position: fixed;
+    margin-top: 0;
+    width: 100%;
+    overflow-y: scroll;
+}

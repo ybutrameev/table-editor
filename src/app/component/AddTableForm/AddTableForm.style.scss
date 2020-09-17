@@ -1,0 +1,44 @@
+.AddTableForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+    width: 100%;
+    padding: 18px 18px 23px;
+    box-shadow: 0px 2px 4px 0px rgba(171,171,171,1);
+    background-color: white;
+    border-radius: 3px;
+
+    &-FieldsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Field {
+        margin: 0;
+
+        + .Field {
+            margin-top: 18px;
+        }
+    }
+
+    + .AddTableForm {
+        height: max-content;
+        max-width: 550px;
+
+        .AddTableForm-FieldsContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .Field {
+            + .Field {
+                margin: 0;
+            }
+        }
+
+        .Button {
+            margin-top: 20px;
+        }
+    }
+}

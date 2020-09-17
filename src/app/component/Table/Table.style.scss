@@ -1,0 +1,67 @@
+.Table {
+    &-Container {
+        width: 100%;
+
+        td, th {
+            font-size: 12px;
+        }
+    }
+
+    &-ButtonsContainer {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 12px;
+        padding: 0 12px;
+    }
+
+    &-Row {
+        &_heading {
+            color: #A5B5CB;
+            background-color: #0A508C;
+        }
+    }
+
+    &-ActionButtons {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid #A5B5CB;
+    }
+
+    &-Column {
+        border: 1px solid #A5B5CB;
+    }
+
+    &-Row {
+        &_heading {
+            th {
+                border: 0;
+            }
+        }
+    }
+
+    &-EditButton {
+        color: #067CE1;
+        text-decoration: underline;
+    }
+
+    &-DeleteButton {
+        color: #B02337;
+        text-decoration: underline;
+    }
+
+    &-RemoveButton {
+        margin-left: 22px;
+    }
+
+    .Button {
+        padding: 4px 16px;
+        margin: 0;
+        font-size: 12px;
+        text-transform: none;
+    }
+
+    tbody {
+        color: #4F5B65;
+        background-color: white;
+    }
+}
